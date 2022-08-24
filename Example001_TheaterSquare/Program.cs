@@ -31,7 +31,6 @@ while (result <= square1)
     result = count * square2;
     i++;
 }
-
 Console.WriteLine($"Количество плит, требуемое для покрытия площади составляет: {count} штук");
 Console.WriteLine($"Площадь покрытия составит: {result} квадратных метров");
 
