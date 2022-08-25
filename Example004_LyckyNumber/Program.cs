@@ -13,5 +13,37 @@
 
 Выходные данные
 В единственной строке выведите «YES», если число n — почти счастливое, и «NO» в противном случае (без кавычек).*/
+ 
 
-Console.WriteLine("Hello, World!");
+// Пример:
+
+Console.WriteLine("Введите номер: ");
+    int n = int.Parse(Console.ReadLine());
+
+bool isLucky(int n)
+{
+    bool flag = true;
+    if (n == 0)
+        flag = false;
+    else
+    {
+        while (n > 0)
+        {
+            if (n % 10 != 4 && n % 10 != 7)
+                flag = false;
+            n /= 10;
+        }
+    }
+    if (flag)
+        return true;
+    return false;
+}
+ 
+int main()
+{
+    if (isLucky(n) && n > 0)
+        Console.WriteLine("Это счастливый номер");
+    else
+        Console.WriteLine("Это не счастливый номер");
+    return 0;
+}
